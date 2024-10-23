@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOS Help - Emergency and WellBeing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Emergency and WellBeing - SOS Help</h1>
+  </header>
+
+  <!-- SOS Help System -->
+  <section class="form-section">
+    <h2>SOS Help</h2>
+    <button id="sosButton">Send SOS</button>
+    <div id="map"></div>
+    <p><a href="index.html">Logout</a></p>
+  </section>
+
+
+  
+  <!-- Add Contacts Section -->
+  <section class="contact-section">
+    <div class="card">
+      <h2>Add Emergency Contacts</h2>
+      <form id="contactForm">
+        <input type="text" id="contactName" placeholder="Contact Name" required>
+        <input type="text" id="contactPhone" placeholder="Contact Phone/Email" required>
+        <button type="submit">Add Contact</button>
+      </form>
+
+      <h3>Saved Contacts</h3>
+      <ul id="contactList"></ul>
+    </div>
+  </section>
+
+
+  <script>
+    // Redirect to success page after sending SOS
+    document.getElementById("sosButton").addEventListener("click", function() {
+      // Simulate sending SOS
+      setTimeout(function() {
+        window.location.href = "sos-success.html";
+      }, 1000);  // Simulate delay
+    });
+  </script>
+
+  <script src="https://apis.mapmyindia.com/advancedmaps/v1/6a21437b7433530bb2bde9164fa648e7/map_load?v=1.5"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
